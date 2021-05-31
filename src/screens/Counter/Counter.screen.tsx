@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Columns } from "react-bulma-components";
 import CounterDisplay from "../../components/CounterDisplay/CounterDisplay.component";
 import Button from "../../components/Button/Button.component";
 import "./Counter.scss";
@@ -18,17 +17,17 @@ function Counter() {
     <div className="hero is-fullheight isFlex is-align-items-center is-justify-content-center">
       <div>
         <CounterDisplay counter={value} />
-        <Columns>
-          <Columns.Column size={2}>
+        <div>
+          <div>
             <Button buttonTxt="Increase" onClick={handleClick} />
-          </Columns.Column>
-          <Columns.Column size={2}>
+          </div>
+          <div>
             <Button
               buttonTxt="Decresess"
               onClick={() => setCounter((counter) => counter - 1)}
             />
-          </Columns.Column>
-        </Columns>
+          </div>
+        </div>
       </div>
     </div>
   );
